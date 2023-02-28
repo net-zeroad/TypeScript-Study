@@ -22,7 +22,7 @@
 - 구글 크롬 브라우저 설치
   1. 윈도우 파워셸 ```[scoop install googlechrome] - [chrome]```
 - 타입스크립트 컴파일러 설치
-  1. 프로젝트 디렉토리의 터미널에 다음 명령어를 입력해 typescript 패키지를 설치한다. 타입스크립트는 nodejs 환경에서만 동작하며 따라서 scoop이 아닌 노드제이에스의 패키지 관리자인 npm을 사용하여 -g 키워드를 통해 전역에 설치한다.
+  1. 프로젝트 디렉토리의 터미널에 다음 명령어를 입력해 typescript 패키지를 설치한다. 타입스크립트는 nodejs 환경에서만 동작하며 따라서 scoop이 아닌 Node.js의 패키지 관리자인 npm을 사용하여 -g 키워드를 통해 전역에 설치한다.
   ```[npm i -g typescript]```
   2. 설치된 컴파일러의 버전 확인
   ```[tsc --version]```
@@ -36,10 +36,15 @@
   2. 터미널에서 명령 실행 -> hello.js 파일 생성됨
   ```[tsc hello.ts]```
   - 즉 타입스크립트 소스가 TSC에 의해 트랜스파일되어 hello.js 파일이 생성됨
-  3. 노드제이에스로 hello.js 파일 실행 -> Hello World! 출력됨
+  3. Node.js로 hello.js 파일 실행 -> Hello World! 출력됨
   ```[node hello.js]```
 - ts-node 설치
   1. 타입스크립트 코드를 ES5로 변환하고 실행까지 동시에 하기 위해 ts-node 프로그램 설치
   ```[npm i -g ts-node] - [ts-node -v]```
   2. 해당 파일이 있는 폴더에서 다음 명령으로 컴파일과 실행 동시에 진행 -> hello.js 파일을 삭제하더라도 Hello World! 가 출력됨
   ```[ts-node hello.ts]```
+
+# 타입스크립트 프로젝트 생성 및 관리
+- 타입스크립트 개발은 Node.js 프로젝트를 만든 다음 개발 언어를 타입스크립트로 설정하는 방식으로 진행한다.
+- 프로젝트는 디렉토리를 하나 만들고 여기에 package.json이란 이름의 파일을 만드는 것으로 시작한다.
+- 보통 package.json은 터미널에서 ```npm init``` 명령을 실행해 생성한다.
